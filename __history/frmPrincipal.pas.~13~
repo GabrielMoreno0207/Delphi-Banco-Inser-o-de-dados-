@@ -1,0 +1,61 @@
+unit frmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
+  FireDAC.Phys, FireDAC.Phys.FB, FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Vcl.Mask,
+  Vcl.DBCtrls;
+
+type
+  TForm2 = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    Panel2: TPanel;
+    FDConnection1: TFDConnection;
+    qrytable: TFDQuery;
+    DataSource1: TDataSource;
+    Button1: TButton;
+    qrytableCIDADE: TStringField;
+    qrytableESTADO: TStringField;
+    Button2: TButton;
+    Label2: TLabel;
+    Edit1: TEdit;
+    Label3: TLabel;
+    Edit2: TEdit;
+    Label4: TLabel;
+    DBEdit1: TDBEdit;
+    Label5: TLabel;
+    DBEdit2: TDBEdit;
+    Button3: TButton;
+    Button4: TButton;
+    Panel3: TPanel;
+    qrytableCODIGO: TIntegerField;
+    DBGrid1: TDBGrid;
+    Label6: TLabel;
+    DBEdit3: TDBEdit;
+    procedure Button3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.Button3Click(Sender: TObject);
+begin
+    qryTable.Post;
+end;
+
+end.
